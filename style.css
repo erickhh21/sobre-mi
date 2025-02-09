@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.DynaPuff-regular {
+  font-family: "DynaPuff", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Jost-regular {
+  font-family: "Jost", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color-melocoton: #FADCAC;
+  --color-verde-oscuro: #158467;
+  --color-verde-medio: #197163;
+  --color-verde-profundo: #065446;
+  --color-gris-carbon: #1E1E1E;
+  --color-blanco-hueso: #f2f2f2;
+  --color-coral: #FF8360;
+  --color-azul: #154984;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+header.gradient{
+	background: linear-gradient(-45deg, #065446, #155b84, #158467, #11627a);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+nav {
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a.active {
+  color: #FF8360 !important; /* Cambia el color a un tono naranja o cualquier color que prefieras */
+  font-weight: bold; /* Puedes agregar negrita al enlace activo */
+}
+
+.sobre-mi {
+  position: relative;
+  background: linear-gradient(rgba(34, 202, 84, 0.689), rgba(25, 72, 47, 0.841)), 
+              url('public/img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.sobre-mi::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.34); /* Capa semitransparente */
+  backdrop-filter: blur(15px); /* Aplica el efecto vidrio esmerilado */
+  z-index: 0; /* Se mantiene detrás del contenido */
+}
+
+
+
+
+
+body {
+  background-color: var(--color-blanco-hueso);
+  color: var(--color-gris-carbon);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bg-melocoton {
+  background-color: var(--color-melocoton);
+}
+
+.bg-blanco-hueso{
+  background-color: var(--color-blanco-hueso);
+}
+
+.bg-coral {
+  background-color: var(--color-coral);
+}
+
+.bg-verde-oscuro {
+  background-color: var(--color-verde-oscuro);
+}
+
+.bg-azul{
+  background-color: var(--color-azul);
+}
+
+.bg-verde-medio {
+  background-color: var(--color-verde-medio);
+}
+
+.bg-verde-profundo {
+  background-color: var(--color-verde-profundo);
+  color: white;
+}
+
+
+

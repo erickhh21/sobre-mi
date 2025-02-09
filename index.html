@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Hernandez</title>
+    <link rel="icon" href="/public/img/coding.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f7fbb9b23.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body class="bg-[#F9F5F2] text-[#1E1E1E] Jost-regular">
+
+    <!-- Barra de Navegación -->
+    <nav class="p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo o nombre -->
+            <div class="text-white text-lg font-bold">
+                <a href="#main" class="DynaPuff-regular">💻 Erick Hernández</a>
+            </div>
+
+            <!-- Menú de navegación -->
+            <div class="hidden lg:flex space-x-4 Jost-regular text-base">
+                <a href="#sobre-mi" class="text-white">Sobre mí</a>
+                <a href="#skills" class="text-white">Skills</a>
+                <a href="#proyectos" class="text-white">Proyectos</a>
+                <a href="#contacto" class="text-white">Contacto</a>
+            </div>
+
+            <!-- Menú desplegable en pantallas pequeñas -->
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="text-white">☰</button>
+            </div>
+        </div>
+
+        <!-- Menú desplegable -->
+        <div id="menu" class="lg:hidden hidden absolute top-15 left-0 w-full p-4">
+            <a href="#sobre-mi" class="block text-white py-2" id="nav-sobre-mi">Sobre mí</a>
+            <a href="#skills" class="block text-white py-2" id="nav-skills">Skills</a>
+            <a href="#proyectos" class="block text-white py-2" id="nav-proyectos">Proyectos</a>
+            <a href="#contacto" class="block text-white py-2" id="nav-contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <main class="pt-15">
+        <!-- Inicio -->
+        <header class="h-screen flex flex-col lg:flex-row justify-center gradient text-white" id="main">
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 px-4 py-4 lg:px-9 lg:py-4">
+                <!-- Imagen -->
+                <div class="order-2 lg:order-1 w-1/2 md:max-w-md lg:max-w-sm">
+                    <img class="rounded-full" src="public/img/profile.jpg" alt="Profile Image" />
+                </div>
+
+                <!-- Texto y botones -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <h1 id="typewriter1"
+                        class="text-4xl md:text-6xl font-bold DynaPuff-regular  w-[460px] max-w-xs md:max-w-md lg:max-w-3xl">
+                        Erick Oswaldo</h1>
+                    <h1 id="typewriter2"
+                        class="text-4xl md:text-6xl font-bold DynaPuff-regular  w-[750px] max-w-xs md:max-w-md lg:max-w-3xl">
+                        Hernandez Hernandez</h1>
+                    <p class="text-lg md:text-xl mt-4">Ingeniero en sistemas computacionales</p>
+
+                    <div class="mt-6 flex gap-4 justify-center lg:justify-start">
+                        <a href="https://linkedin.com/in/erick-oswaldo-hernandez-hernández-0273761a0"
+                            class="bg-coral px-4 py-2 rounded transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 ...">LinkedIn</a>
+                        <a href="https://github.com/erickhh21"
+                            class="bg-coral px-4 py-2 rounded transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-gray-600 ...">GitHub</a>
+                        <a href="public/pdf/Erick Oswaldo Hernández Hernández.pdf" download="Erick_Hernandez.pdf"
+                            class="bg-coral px-4 py-2 rounded transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-600 ...">Descargar
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- Sobre mí -->
+        <section class=" sm:h-screen flex items-center justify-center px-4 lg:px-9 py-4 sobre-mi relative"
+            id="sobre-mi">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-9 w-full max-w-6xl relative z-10">
+
+                <!-- Columna 1: Texto -->
+                <div class="order-2 lg:order-1 text ">
+                    <h2 class="text-xl md:text-2xl lg:text-2xl font-bold text-yellow-100 flex items-center">
+                        <svg class="w-10 h-10" viewBox="0 0 88 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M56.1708 1.30962C42.1013 1.55951 25.5024 -1.03249 13.2051 7.91805C7.30338 12.2136 3.53881 20.0018 1.87478 26.9527C-0.168477 35.4876 0.773256 43.3483 5.24464 50.9539C10.7588 60.3333 20.3152 66.803 29.683 71.8757C36.4013 75.5138 43.2421 77.319 50.8228 78.1401C58.1686 78.9358 65.0731 78.6553 71.5619 74.704C82.4725 68.0601 88.9726 56.7398 86.9794 43.8754C85.6401 35.231 83.6807 24.632 77.8687 17.733C75.5091 14.932 73.1903 11.6692 70.4243 9.27843C68.9829 8.03263 67.6546 6.66009 66.1944 5.43574C60.3568 0.541286 51.8459 1.63212 44.7535 1.15131"
+                                stroke="currentColor" stroke-width="0.8751" />
+                            <path
+                                d="M6.41907 46.2975C8.81956 51.6809 13.8301 54.9321 17.5343 59.329C19.7472 61.9559 22.6269 63.7993 25.6094 65.4109C27.0079 66.1666 28.2152 67.0608 29.7919 67.4232C31.4147 67.7962 32.9558 68.1568 34.5461 68.6473C37.7534 69.6365 40.5913 71.5336 43.8193 72.5199C47.2161 73.5577 50.8834 73.5667 54.4004 73.6937C57.725 73.8137 61.3078 74.4146 64.5487 73.3489C67.3863 72.4158 69.6456 70.6847 72.0212 68.9544C75.1053 66.708 77.9187 63.9468 80.1734 60.876C83.9653 55.7115 86.3685 48.7404 84.8915 42.3196C83.2805 35.3165 80.3993 28.6943 76.0009 22.9846C73.6056 19.8751 71.0229 16.7913 68.0924 14.1757C65.5734 11.9273 63.6361 8.11057 60.0906 7.324C52.8215 5.71133 44.8519 4.93997 37.4295 5.80484C35.5627 6.02236 33.8905 6.22932 32.0128 6.21358C30.7643 6.20312 29.3747 6.34317 28.127 6.46722C26.5904 6.61999 24.9829 6.87595 23.5116 7.33815C21.9119 7.84072 20.1819 7.86786 18.617 8.39721C11.5502 10.7875 8.48191 18.6566 6.69158 25.2851C4.63493 32.8994 3.72928 41.1282 7.99438 48.0708"
+                                stroke="currentColor" stroke-width="0.893634" />
+                            <path
+                                d="M19.6021 54.6155C22.8078 57.34 26.0548 59.9545 29.8234 61.8362C32.0883 62.967 34.2147 64.3475 36.6058 65.2121C39.2441 66.1661 42.0976 66.9014 44.8185 67.5817C46.5201 68.0072 48.1414 68.7026 49.8374 69.1324C51.4827 69.5493 53.1699 69.717 54.8412 69.994C57.6509 70.4597 59.7807 70.7782 62.5015 69.768C64.9945 68.8423 67.4123 67.8835 69.7678 66.6392C72.2801 65.312 74.531 63.3956 76.2116 61.1116C78.3599 58.1921 79.1375 54.9004 79.2198 51.3631C79.3267 46.7686 78.4813 42.5995 77.2176 38.2053C75.5505 32.4084 72.8176 27.6125 69.4249 22.679C67.6296 20.0682 65.6893 17.4884 63.5161 15.1739C61.4831 13.0088 59.6114 10.9212 56.9508 9.50821C51.9733 6.86491 45.7244 6.82664 40.2417 6.97399C37.4792 7.04823 34.6533 6.42131 31.9276 7.14071C28.6697 8.00057 25.5921 9.26246 22.4377 10.3968C16.4099 12.5645 12.4458 18.1218 10.453 24.0192C9.2172 27.6762 8.48114 31.3904 8.51484 35.2546C8.54512 38.7257 10.4511 41.9316 12.3824 44.7041C13.5976 46.4486 14.5721 48.2296 15.5235 50.1216C17.0398 53.1373 19.7797 55.6007 22.7372 57.16"
+                                stroke="currentColor" stroke-width="0.917925" />
+                        </svg>
+                        &nbsp;
+                        Sobre mí
+                    </h2>
+                    <p
+                        class="text-sm md:text-lg lg:text-lg    md:max-w-2xl mt-4 text-amber-100 p-2 bg-black bg-opacity-40 rounded-2xl">
+                        <strong class="text-[#fc977b]">Ingeniero en sistemas</strong>,
+                        con formación en el desarrollo de software y gestión de proyectos.
+                        Me intereso en la implementación de soluciones orientadas a la optimización de procesos y
+                        mejora de la administración de información en diversos entornos. <br><br>
+
+                        Durante mi trayectoria, he trabajado en la planificación y desarrollo de aplicaciones que
+                        facilitan la automatización de tareas. Poseo una sólida capacidad analítica y un enfoque
+                        orientado a la resolución de
+                        problemas,
+                        lo que me permite identificar oportunidades de mejora y diseñar estrategias
+                        efectivas para su implementación. <br><br>
+
+                        Me destaco por mi habilidad para colaborar en equipos multidisciplinarios,
+                        adaptarme a nuevos retos y aprender de manera constante.
+                        Considero la mejora continua como un pilar fundamental en mi desarrollo profesional,
+                        por lo que busco mantenerme actualizado en tendencias y mejores prácticas dentro
+                        del ámbito tecnológico. Mi objetivo es aportar soluciones innovadoras y funcionales
+                        que contribuyan al crecimiento y eficiencia de las organizaciones.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Card con datos -->
+                <div class="lg:flex order-2 lg:order-2 justify-center">
+                    <div class="bg-melocoton text-gray-800 rounded-2xl shadow-xl p-6 max-w-md">
+                        <h3 class="text-2xl font-semibold text-center">Mis Datos</h3>
+                        <ul class="mt-4 space-y-2 text-gray-700">
+                            <li><strong>
+                                    <i class="fa-solid fa-user"></i>
+                                    Nombre:</strong> Erick Oswaldo Hernandez Hernandez</li>
+                            <li><strong>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Ubicación:</strong> Pachuca de soto, Hidalgo</li>
+                            <li><strong>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email:</strong> eohh20011@gmail.com</li>
+                            <li><strong>
+                                    <i class="fa-solid fa-phone"></i>
+                                    Teléfono:</strong> +52 771 216 2758</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-center mt-7">Educación</h3>
+                        <ul class="mt-4 space-y-2 text-gray-700">
+                            <li><strong>
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                    Universidad:</strong> Instituto Tecnologico de Pachuca</li>
+                            <li><strong>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Ubicación:</strong> Blvd. Felipe Ángeles Km. 84.5, Venta Prieta, 42083 Pachuca de
+                                Soto, Hgo.</li>
+                            <li><strong>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    Periodo:</strong> agosto 2019 – agosto 2024</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section class="h-screen py-20 md:py-40" id="skills">
+            <h2 class="text-2xl md:text-5xl font-bold text-center">Habilidades</h2>
+            <div class="flex flex-wrap justify-center gap-6 mt-6">
+                <div class="bg-melocoton px-4 py-2 rounded lg:w-[270px]">
+                    <h3
+                        class="mb-2 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white sm:text-lg md:text-xl">
+                        Lenguajes</h3>
+                    <ul
+                        class="max-w-md text-sm md:text-lg  space-y-1 text-gray-800 list-disc list-inside dark:text-gray-400 ">
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/c.png" class="h-5">
+                            C#
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/java.png" class="h-5">
+                            Java
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/js.png" class="h-5">
+                            JavaScript
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/web.png" class="h-5">
+                            PHP
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-melocoton px-4 py-2 rounded lg:w-[270px]">
+                    <h3
+                        class="mb-2 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white sm:text-lg md:text-xl">
+                        Bases de datos</h3>
+                    <ul
+                        class="max-w-md text-sm md:text-lg space-y-1 text-gray-800 list-disc list-inside dark:text-gray-400 ">
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/programing.png" class="h-5">
+                            MySQL
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/postgre.png" class="h-5">
+                            PostgreSQL
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/database.png" class="h-5">
+                            SQLite
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-melocoton px-4 py-2 rounded lg:w-[270px]">
+                    <h3
+                        class="mb-2 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white sm:text-lg md:text-xl">
+                        Frameworks</h3>
+                    <ul
+                        class="max-w-md text-sm md:text-lg space-y-1 text-gray-800 list-disc list-inside dark:text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/bootstrap.png" class="h-5">
+                            Bootstrap
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/laravel.png" class="h-5">
+                            Laravel
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/spring-boot-icon.png" class="h-5">
+                            Spring
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/Tailwind.png" class="h-3">
+                            Tailwind
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-melocoton px-4 py-2 rounded lg:w-[270px]">
+                    <h3
+                        class="mb-2 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white sm:text-lg md:text-xl">
+                        Sistemas operativos</h3>
+                    <ul
+                        class="max-w-md text-sm md:text-lg space-y-1 text-gray-800 list-disc list-inside dark:text-gray-400 ">
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/linux.png" class="h-5">
+                            Linux
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/menu.png" class="h-5">
+                            Windows
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-melocoton px-4 py-2 rounded lg:w-[270px]">
+                    <h3
+                        class="mb-2 text-lg md:text-2xl font-semibold text-gray-900 dark:text-white sm:text-lg md:text-xl">
+                        Control de versiones</h3>
+                    <ul
+                        class="max-w-md text-sm md:text-lg space-y-1 text-gray-800 list-disc list-inside dark:text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/git.png" class="h-5">
+                            Git
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="public/img/github.png" class="h-5">
+                            GitHub
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Proyectos -->
+        <section class="sm:h-screen py-20 bg-verde-medio text-center" id="proyectos">
+            <h2 class="text-4xl font-bold text-yellow-100">Proyectos</h2>
+            <div class="grid md:flex md:flex-row gap-3 justify-center mt-6 mx-4 ">
+                <div class="bg-melocoton p-6 rounded text-left lg:max-w-lg">
+                    <p class="text-xl font-bold">Gestión de planeaciones y evidencias</p>
+                    <h3 class="text-lg font-semibold">Desarrollador</h3>
+                    <p class="mt-2">
+                        <i class="fa-solid fa-location-dot"></i> &nbsp;
+                        Pachuca de Soto, Hidalgo
+                    </p>
+                    <p class="">
+                        <i class="fa-solid fa-building"></i> &nbsp;
+                        Instituto Tecnologico de Pachuca
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-calendar"></i> &nbsp;
+                        diciembre 2022 – junio 2023
+                    </p>
+                    <ul class="mt-3 ml-5 list-disc">
+                        <li>Diseñé una plataforma para la gestión de planeaciones y evidencias del <strong>Departamento
+                                de Ingeniería Eléctrica.</strong></li>
+                        <li>Implementé y administré una base de datos relacional en MySQL</li>
+                        <li>Desarrollé funcionalidades utilizando PHP y JavaScript para la interacción entre el
+                            front-end y el back-end</li>
+                    </ul>
+                    <h3 class="text-lg font-bold mt-2">Tecnologias</h3>
+                    <div class="flex flex-row gap-3 justify-center mt-3">
+                        <img src="public/img/web.png" class="h-9">
+                        <img src="public/img/js.png" class="h-9">
+                        <img src="public/img/HTML5.png" class="h-9">
+                        <img src="public/img/bootstrap.png" class="h-9 bg-white rounded-md">
+                        <img src="public/img/programing.png" class="h-9">
+                    </div>
+
+                </div>
+
+                <div class="bg-melocoton p-6 rounded text-left lg:max-w-lg">
+                    <p class="text-xl font-bold">Plataforma de préstamos de artículos institucionales</p>
+                    <h3 class="text-lg font-semibold">Desarrollador</h3>
+                    <p class="mt-2">
+                        <i class="fa-solid fa-location-dot"></i> &nbsp;
+                        Pachuca de Soto, Hidalgo
+                    </p>
+                    <p class="">
+                        <i class="fa-solid fa-building"></i> &nbsp;
+                        Instituto Tecnologico de Pachuca
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-calendar"></i> &nbsp;
+                        agosto 2023 – enero 2024
+                    </p>
+                    <ul class="mt-3 ml-5 list-disc">
+                        <li>Diseñé una base de datos optimizada para una <strong>plataforma de préstamos de artículos
+                                institucionales.</strong></li>
+                        <li>Desarrollé un API REST utilizando C# para integrar y gestionar datos de manera eficiente.
+                        </li>
+                        <li>Diseñé y desarrollé la interfaz de usuario del front-end empleando ASP.NET bajo el patrón de
+                            diseño MVC</li>
+                    </ul>
+                    <h3 class="text-lg font-bold mt-2">Tecnologias</h3>
+                    <div class="flex flex-row gap-3 justify-center mt-3">
+                        <img src="public/img/asp.png" class="h-7 mt-1">
+                        <img src="public/img/c.png" class="h-9">
+                        <img src="public/img/HTML5.png" class="h-9">
+                        <img src="public/img/bootstrap.png" class="h-9 bg-white rounded-md">
+                        <img src="public/img/programing.png" class="h-9">
+                    </div>
+                </div>
+
+                <div class="bg-melocoton p-6 rounded text-left lg:max-w-lg">
+                    <h3 class="text-2xl font-semibold">Ingeniero de redes</h3>
+                    <p class="mt-2">
+                        <i class="fa-solid fa-location-dot"></i> &nbsp;
+                        CDMX - Hidalgo
+                    </p>
+                    <p class="">
+                        <i class="fa-solid fa-building"></i> &nbsp;
+                        REDA IT PRO
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-calendar"></i> &nbsp;
+                        enero 2024 – julio 2024
+                    </p>
+                    <ul class="mt-3 ml-5 list-disc">
+                        <li>Brindé atención y resolución de incidencias tecnológicas en diversas organizaciones
+                            bancarias, garantizando la continuidad operativa.</li>
+                        <li>Realicé la <strong>instalación y mantenimiento de equipos de cómputo</strong> en entornos
+                            bancarios, asegurando su óptimo funcionamiento.</li>
+                        <li>Gestioné el <strong>inventario de equipos de red</strong> en diferentes cadenas de
+                            restaurantes en el estado, con el fin de mantener un control eficiente y actualizado.</li>
+                        <li>Participé en la <strong>instalación de infraestructura y cableado estructurado</strong> en
+                            ESIME Azcapotzalco, contribuyendo al diseño y despliegue de soluciones tecnológicas en el
+                            área.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="sm:h-screen py-20 text-center bg-melocoton" id="contacto">
+            <h2 class="text-4xl font-bold">Contacto</h2>
+            <div class="grid sm:flex sm:flex-row justify-center">
+                <div class="grid sm:flex sm:flex-row mt-6 mx-4 max-w-full bg-blanco-hueso p-9 rounded-lg ">
+                    <div class="order-2 lg:order-1 text">
+                        <div class="">
+                            <form class="" id="contact-form">
+                                <input type="text" placeholder="Nombre" id="name"
+                                    class="w-full p-2 rounded mb-4 bg-[#F9F5F2] text-[#1E1E1E] border border-gray-300">
+                                <input type="email" placeholder="Email" id="email"
+                                    class="w-full p-2 rounded mb-4 bg-[#F9F5F2] text-[#1E1E1E] border border-gray-300">
+                                <textarea placeholder="Mensaje" id="message"
+                                    class="w-full p-2 rounded mb-4 bg-[#F9F5F2] text-[#1E1E1E] border border-gray-300"></textarea>
+                                <button type="submit" class="bg-coral font-bold px-6 py-2 rounded">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="order-2 lg:order-2 sm:ml-10 mt-5 sm:mt-0">
+                        <h2 class="text-2xl font-semibold">Redes sociales</h2>
+                        <div class="flex flex-row justify-center mt-5">
+                            <img src="public/img/social/coding.svg" class="h-40">
+                        </div>
+
+                        <div class="flex flex-row gap-3 justify-center mt-5">
+                            <a href="https://www.facebook.com/profile.php?id=100005834468162&locale=es_LA"><img
+                                    src="public/img/social/facebook.png" class="h-9"></a>
+                            <a href="https://www.instagram.com/hh_erick/"><img src="public/img/social/instagram.png"
+                                    class="h-9"></a>
+                            <a href="https://linkedin.com/in/erick-oswaldo-hernandez-hernández-0273761a0"><img
+                                    src="public/img/social/linkedin.png" class="h-9"></a>
+                            <a href="https://x.com/eohh20011"><img src="public/img/social/twitter.png" class="h-9"></a>
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=7712162758&text&type=phone_number&app_absent=0"><img
+                                    src="public/img/social/whatsapp.png" class="h-9"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+    </main>
+
+</body>
+<script src="public/js/typewrite.js"></script>
+<script src="public/js/toggle-nav.js"></script>
+<script src="public/js/Scroll.js"></script>
+<script src="public/js/email.js"></script>
+
+</html>
